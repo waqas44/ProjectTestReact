@@ -26,9 +26,9 @@ function App() {
   return (
     <div>
       <form onSubmit={submitClickHandler}>
-        <label>User name </label>
-        <input type="text" onChange={userNameHandler} />
-        <label>Age </label>
+        <label htmlFor='username'>User name </label>
+        <input id='username' type="text" onChange={userNameHandler} />
+        <label htmlFor='age'>Age </label>
         <input type="number" onChange={userAgeHandler} />
 
         <button type='submit'> Submit</button>
