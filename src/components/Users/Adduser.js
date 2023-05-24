@@ -1,5 +1,7 @@
 import React from "react";
+import Card from "../UI/Card";
 
+// import classes form './adduser.module.css';
 
 const Adduser = (props) => {
     let Name1 = '';
@@ -25,7 +27,7 @@ const Adduser = (props) => {
 
     return (
 
-        <div>
+        <Card>
 
             <form onSubmit={submitClickHandler}>
                 <label htmlFor='username'>User name </label>
@@ -33,10 +35,10 @@ const Adduser = (props) => {
                 <label htmlFor='age'>Age </label>
                 <input type="number" onChange={userAgeHandler} />
 
-                <button type='submit'> Submit</button>
+                <button type='submit'> Add User</button>
             </form>
 
-        </div>
+        </Card>
 
 
 
