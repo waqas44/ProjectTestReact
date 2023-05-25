@@ -1,9 +1,9 @@
 import React from 'react';
 
+//import './index.css'
 
-import './components/Users/Adduser'
 import Adduser from './components/Users/Adduser';
-import './components/UI/Card'
+
 import Card from './components/UI/Card';
 
 function App() {
