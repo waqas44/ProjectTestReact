@@ -32,7 +32,8 @@ const Adduser = (props) => {
         event.preventDefault();
         // console.log('User Name ' + Name1, 'Age' + Age1);
         console.log(enteredUserName, enterdAge);
-
+        setEnteredUserName('');
+        setEnteredAge('');
     };
 
     return (
@@ -41,10 +42,9 @@ const Adduser = (props) => {
 
             <form onSubmit={submitClickHandler}>
                 <label htmlFor='username'>User name </label>
-                <input id='username' type="text" onChange={userNameHandler} />
+                <input id='username' type="text" value={enteredUserName} onChange={userNameHandler} />
                 <label htmlFor='age'>Age </label>
-                <input type="number" onChange={userAgeHandler} />
-
+                <input type="number" value={enterdAge} onChange={userAgeHandler} />
                 <Button type="submit"> Add user</Button>
             </form>
 
