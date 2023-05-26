@@ -1,27 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "../UI/Card";
 
 import classes from './Adduser.module.css';
+import Button from "../UI/Button";
+
+
+
+
 
 const Adduser = (props) => {
-    let Name1 = '';
-    let Age1 = '';
-    const userNameHandler = (event) => {
-        console.log(event.target.value);
+    // let Name1 = '';
+    // let Age1 = '';
+    const [enteredUserName, setEnteredUserName] = useState('');
 
-        Name1 = event.target.value;
+    const [enterdAge, setEnteredAge] = useState('');
+    const userNameHandler = (event) => {
+        // console.log(event.target.value);
+        // useState(uNameUpdated);
+        setEnteredUserName(event.target.value);
+        // Name1 = event.target.value;
     };
     const userAgeHandler = (event) => {
-        console.log(event.target.value);
-
-        Age1 = event.target.value;
+        // console.log(event.target.value);
+        // useState(uAgeUpdated);
+        setEnteredAge(event.target.value);
+        // Age1 = event.target.value;
 
     };
 
     const submitClickHandler = (event) => {
         event.preventDefault();
-        console.log('User Name ' + Name1, 'Age' + Age1);
-
+        // console.log('User Name ' + Name1, 'Age' + Age1);
+        console.log(enteredUserName, enterdAge);
 
     };
 
@@ -35,14 +45,14 @@ const Adduser = (props) => {
                 <label htmlFor='age'>Age </label>
                 <input type="number" onChange={userAgeHandler} />
 
-                <button type='submit'> Add User</button>
+                <Button type="submit"> Add user</Button>
             </form>
 
         </Card>
 
 
 
-    )
+    );
 
 
 };
