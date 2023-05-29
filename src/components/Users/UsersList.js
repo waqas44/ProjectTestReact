@@ -6,12 +6,12 @@ import classes from './UsersList.module.css';
 const UsersList = (props) => {
 
     return (
-        <Card className={classes.user}>
-            <ul> {props.users.map(user => { // props.users holds array of objects
+        <Card className={classes.users}>
+            <ul> {props.users.map(user => ( // props.users holds array of objects
 
                 <li> {user.name}  {user.age} Years Old </li>
                 // reason of expecting array of of objects here is because we are managing the data, it is our designed app.
-            })
+            ))
 
 
 
