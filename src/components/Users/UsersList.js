@@ -9,7 +9,7 @@ const UsersList = (props) => {
         <Card className={classes.users}>
             <ul> {props.users.map(user => ( // props.users holds array of objects
 
-                <li> {user.name}  {user.age} Years Old </li>
+                <li key={user.id}> {user.name}  {user.age} Years Old </li>
                 // reason of expecting array of of objects here is because we are managing the data, it is our designed app.
             ))
 

@@ -13,7 +13,7 @@ function App(props) {
   const addUserHandler = (uName, uAge) => { // This addUserHandler holds all the arrays of previous users and newly added users data
     setUserList((preUserstate) => {
 
-      return [...preUserstate, { name: uName, age: uAge }];
+      return [...preUserstate, { name: uName, age: uAge, id: Math.random().toString() }];
     }
 
 
