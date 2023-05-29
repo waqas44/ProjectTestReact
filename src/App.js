@@ -5,6 +5,7 @@ import React from 'react';
 import Adduser from './components/Users/Adduser';
 
 import Card from './components/UI/Card';
+import UsersList from './components/Users/UsersList';
 
 function App() {
 
@@ -13,7 +14,8 @@ function App() {
     <div>
 
       <Adduser />
-      <Card />
+      {/* <Card /> */}
+      <UsersList users={[]} />
     </div>
   );
 };

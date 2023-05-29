@@ -31,7 +31,11 @@ const Adduser = (props) => {
     const submitClickHandler = (event) => {
         event.preventDefault();
         // console.log('User Name ' + Name1, 'Age' + Age1);
-        if (enteredUserName.trim().length === 0 || enterdAge.trim().length < 1) {
+        if (enteredUserName.trim().length === 0 || enterdAge.trim().length === 0) {
+            return;
+
+        }
+        if (+enterdAge < 1) {
             return;
 
         }
