@@ -3,7 +3,7 @@ import Card from "../UI/Card";
 
 import classes from './Adduser.module.css';
 import Button from "../UI/Button";
-
+import ErrorModal from "../UI/ErrorModal";
 
 
 
@@ -46,20 +46,21 @@ const Adduser = (props) => {
     };
 
     return (
+        <div >
+            <ErrorModal title="Errro heading" message="Error Body" />
+            <Card className={classes.input}>
 
-        <Card className={classes.input}>
+                <form onSubmit={submitClickHandler}>
+                    <label htmlFor='username'>User name </label>
+                    <input id='username' type="text" value={enteredUserName} onChange={userNameHandler} />
+                    <label htmlFor='age'>Age </label>
+                    <input type="number" value={enterdAge} onChange={userAgeHandler} />
+                    <Button type="submit"> Add user</Button>
+                </form>
 
-            <form onSubmit={submitClickHandler}>
-                <label htmlFor='username'>User name </label>
-                <input id='username' type="text" value={enteredUserName} onChange={userNameHandler} />
-                <label htmlFor='age'>Age </label>
-                <input type="number" value={enterdAge} onChange={userAgeHandler} />
-                <Button type="submit"> Add user</Button>
-            </form>
+            </Card>
 
-        </Card>
-
-
+        </div>
 
     );
 
