@@ -5,7 +5,7 @@ import classes from './Adduser.module.css';
 import Button from "../UI/Button";
 import ErrorModal from "../UI/ErrorModal";
 
-
+import Wrapper from "../Helpers/Wrapper";
 
 
 const Adduser = (props) => {
@@ -61,8 +61,8 @@ const Adduser = (props) => {
 
     };
     return (
-        [
-            error && <ErrorModal onConfirm={errorHandler} title={error.title} message={error.message} />,
+        <Wrapper>
+            {error && <ErrorModal onConfirm={errorHandler} title={error.title} message={error.message} />}
 
             <Card className={classes.input}>
 
@@ -76,7 +76,7 @@ const Adduser = (props) => {
 
             </Card>
 
-        ]
+        </Wrapper>
 
     );
 
