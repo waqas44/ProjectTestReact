@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import Card from './Card';
 import Button from './Button';
@@ -6,7 +6,7 @@ import classes from './ErrorModal.module.css';
 
 const ErrorModal = (props) => {
   return (
-    <React.Fragment>
+    <Fragment>
       <div className={classes.backdrop} onClick={props.onConfirm} />
        //we are forwarding the props.onconfirm by on click, onclick is avalaible by default for every html element
       <Card className={classes.modal}>
@@ -20,7 +20,7 @@ const ErrorModal = (props) => {
           <Button onClick={props.onConfirm}>Okay</Button>
         </footer>
       </Card>
-    </React.Fragment>
+    </Fragment>
   );
 };
 
