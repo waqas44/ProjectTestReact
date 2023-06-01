@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 
 //import './index.css'
 
-import Adduser from './components/Users/Adduser';
+//import Adduser from './components/Users/Adduser';
+import AdduserRefs from './components/Users/AddUserRefs';
 
 import Card from './components/UI/Card';
 import UsersList from './components/Users/UsersList';
@@ -23,7 +24,7 @@ function App(props) {
   return (
     <>
 
-      <Adduser onAddUser={addUserHandler} />
+      <AdduserRefs onAddUser={addUserHandler} />
 
       <UsersList users={userlist} />
     </>
