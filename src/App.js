@@ -21,12 +21,12 @@ function App(props) {
 
   }
   return (
-    <div>
+    <>
 
       <Adduser onAddUser={addUserHandler} />
 
       <UsersList users={userlist} />
-    </div>
+    </>
   );
 };
 
