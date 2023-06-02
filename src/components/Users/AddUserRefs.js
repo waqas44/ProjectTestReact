@@ -21,8 +21,8 @@ const AdduserRefs = (props) => {
     const submitClickHandler = (event) => {
         event.preventDefault();
         // console.log('User Name ' + Name1, 'Age' + Age1);
-        const inputAgeEnterd = inputName.current.value;
-        const inputNameEnterd = inputAge.current.value;
+        const inputNameEnterd = inputName.current.value;
+        const inputAgeEnterd = inputAge.current.value;
 
 
         if (inputNameEnterd.trim().length === 0 || inputAgeEnterd.trim().length === 0) {
